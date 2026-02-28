@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Voice Assistant - Alzheimer's Care</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo"> ⚕️ AI Voice Assistant</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#technologies">Technologies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="dashboard.html" class="btn-dashboard">⚙ Dashboard</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">AI Smart Voice Assistant and Monitoring System for Alzheimer's Patients</h1>
+            <p class="hero-description">An intelligent healthcare solution combining voice reminders, door monitoring, and emergency alerts to ensure safety and independence for Alzheimer's patients.</p>
+            <a href="#demo" class="btn-hero">Try Demo</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About the Project</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>🧩 The Problem</h3>
+                    <p>Alzheimer's disease affects millions worldwide, causing memory loss and confusion. Patients often forget medications, daily routines, and may wander unsafely, putting their health at risk.</p>
+                </div>
+                <div class="about-card">
+                    <h3>💡 Our Solution</h3>
+                    <p>An AI-powered voice assistant integrated with IoT sensors that provides timely reminders, monitors patient movements, and alerts caregivers in emergencies, ensuring safety and independence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💊</div>
+                    <h3>Voice Reminder</h3>
+                    <p>Automated voice alerts for medication, meals, and daily activities</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚨</div>
+                    <h3>Emergency Alert</h3>
+                    <p>Instant notifications to caregivers during critical situations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚪</div>
+                    <h3>Door Monitoring</h3>
+                    <p>Real-time tracking when patient leaves or enters home</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Caregiver Notification</h3>
+                    <p>SMS and app alerts sent to family members instantly</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Wake-up Reminder</h3>
+                    <p>Gentle morning alerts to maintain daily routine</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💧</div>
+                    <h3>Water Reminder</h3>
+                    <p>Regular hydration reminders throughout the day</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🆘</div>
+                    <h3>Emergency Help Reminder</h3>
+                    <p>Voice-activated emergency assistance system</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Set Reminder</h3>
+                    <p>Caregivers configure medication schedules and daily routines through the dashboard</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Voice Alert</h3>
+                    <p>AI voice assistant speaks clear reminders at scheduled times</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Door Monitoring</h3>
+                    <p>ESP32 sensors detect when patient exits or enters the home</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Caregiver Notification</h3>
+                    <p>Instant alerts sent to family members via SMS and app notifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Live Demo</h2>
+            <p class="demo-subtitle">Click any button to hear the voice assistant</p>
+            <div class="demo-grid">
+                <button class="demo-btn" onclick="playVoice('medicine')">
+                    <span class="demo-icon">💊</span>
+                    <span>Medicine Reminder</span>
+                </button>
+                <button class="demo-btn" onclick="playVoice('wakeup')">
+                    <span class="demo-icon">⏰</span>
+                    <span>Wake-up Reminder</span>
+                </button>
+                <button class="demo-btn" onclick="playVoice('water')">
+                    <span class="demo-icon">💧</span>
+                    <span>Water Reminder</span>
+                </button>
+                <button class="demo-btn" onclick="playVoice('emergency')">
+                    <span class="demo-icon">🆘</span>
+                    <span>Emergency Help</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="technologies" class="section">
+        <div class="container">
+            <h2 class="section-title">Technologies Used</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">📡</div>
+                    <h3>ESP32</h3>
+                    <p>Microcontroller for IoT connectivity and sensor integration</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">⚙️</div>
+                    <h3>Arduino IDE</h3>
+                    <p>Development environment for embedded programming</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">💻</div>
+                    <h3>Embedded C</h3>
+                    <p>Programming language for hardware control</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">📶</div>
+                    <h3>WiFi</h3>
+                    <p>Wireless connectivity for real-time monitoring</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Contact Team</h2>
+            <div class="contact-card">
+                <h3>Project Team</h3>
+                <p>For inquiries about this healthcare innovation project:</p>
+                <div class="contact-info">
+                    <p>📧 <b>Email:</b> team@aivoiceassistant.com</p>
+                    <p>📱 <b>Phone:</b> +91 90807 88409</p>
+                    <p>🏥 <b>Location:</b> Healthcare Innovation Lab</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 AI Voice Assistant for Alzheimer's Care. All rights reserved.</p>
+    </footer>
+
+    <div id="voicePopup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <div class="popup-icon">🔊</div>
+            <h3 id="popupTitle">Voice Reminder</h3>
+            <p id="popupMessage">Playing voice message...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

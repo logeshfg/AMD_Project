@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AI Voice Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">🧠 AI Voice Assistant</div>
+            <a href="index.html" class="btn-dashboard">← Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <h1 class="dashboard-title">Patient Monitoring Dashboard</h1>
+        
+        <div class="dashboard-grid">
+            <div class="dash-card">
+                <h3 class="card-title">👤 Patient Profile</h3>
+                <div class="profile-info">
+                    <p><strong>Name:</strong> John Smith</p>
+                    <p><strong>Age:</strong> 72 years</p>
+                    <p><strong>Blood Group:</strong> O+</p>
+                </div>
+            </div>
+
+            <div class="dash-card">
+                <h3 class="card-title">📊 Patient Status</h3>
+                <div class="status-badges">
+                    <span class="status-badge status-safe" id="statusSafe">SAFE</span>
+                    <span class="status-badge status-outside" id="statusOutside">OUTSIDE</span>
+                    <span class="status-badge status-alert" id="statusAlert">ALERT</span>
+                </div>
+            </div>
+
+            <div class="dash-card card-wide">
+                <h3 class="card-title">🔊 Voice Reminder Control</h3>
+                <div class="reminder-buttons">
+                    <button class="reminder-btn" onclick="playDashboardVoice('medicine')">
+                        <span>💊</span> Medicine Reminder
+                    </button>
+                    <button class="reminder-btn" onclick="playDashboardVoice('wakeup')">
+                        <span>⏰</span> Wake-up Reminder
+                    </button>
+                    <button class="reminder-btn" onclick="playDashboardVoice('water')">
+                        <span>💧</span> Water Reminder
+                    </button>
+                    <button class="reminder-btn" onclick="playDashboardVoice('emergency')">
+                        <span>🆘</span> Emergency Help
+                    </button>
+                </div>
+            </div>
+
+            <div class="dash-card card-wide">
+                <h3 class="card-title">🚪 Door Monitoring System</h3>
+                <div class="monitoring-grid">
+                    <div class="monitor-item">
+                        <span class="monitor-label">Door Status:</span>
+                        <span class="monitor-value" id="doorStatus">CLOSED</span>
+                    </div>
+                    <div class="monitor-item">
+                        <span class="monitor-label">Patient Status:</span>
+                        <span class="monitor-value" id="patientStatus">SAFE</span>
+                    </div>
+                    <div class="monitor-item">
+                        <span class="monitor-label">Exit Time:</span>
+                        <span class="monitor-value" id="exitTime">-</span>
+                    </div>
+                    <div class="monitor-item">
+                        <span class="monitor-label">Alert:</span>
+                        <span class="monitor-value" id="alertMessage">-</span>
+                    </div>
+                    <div class="monitor-item">
+                        <span class="monitor-label">Caregiver Notification:</span>
+                        <span class="monitor-value" id="caregiverNotif">-</span>
+                    </div>
+                </div>
+                <button class="btn-simulate" onclick="simulateDoorOpen()">🚪 Simulate Door Open</button>
+            </div>
+
+            <div class="dash-card card-wide">
+                <h3 class="card-title">📅 Reminder Schedule</h3>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Reminder Type</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:00 AM</td>
+                            <td>💊 Medicine Reminder</td>
+                            <td><span class="badge badge-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>10:00 AM</td>
+                            <td>💧 Water Reminder</td>
+                            <td><span class="badge badge-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM</td>
+                            <td>💊 Medicine Reminder</td>
+                            <td><span class="badge badge-pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>02:00 PM</td>
+                            <td>💧 Water Reminder</td>
+                            <td><span class="badge badge-pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>06:00 PM</td>
+                            <td>💊 Medicine Reminder</td>
+                            <td><span class="badge badge-pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>07:00 AM</td>
+                            <td>⏰ Wake-up Reminder</td>
+                            <td><span class="badge badge-completed">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="dash-card">
+                <h3 class="card-title">📜 Activity History</h3>
+                <div class="activity-log">
+                    <div class="activity-item">
+                        <span class="activity-time">10:30 AM</span>
+                        <span class="activity-text">Medicine reminder given</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-time">09:15 AM</span>
+                        <span class="activity-text">Water reminder completed</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-time">08:00 AM</span>
+                        <span class="activity-text">Patient woke up</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-time">07:45 AM</span>
+                        <span class="activity-text">Wake-up reminder given</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-time">Yesterday</span>
+                        <span class="activity-text">Door opened at 3:20 PM</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-time">Yesterday</span>
+                        <span class="activity-text">Emergency alert triggered</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dash-card">
+                <h3 class="card-title">⚙️ System Status</h3>
+                <div class="system-status">
+                    <div class="status-item">
+                        <span class="status-indicator status-active"></span>
+                        <span>System Active</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="battery-icon">🔋</span>
+                        <span>Battery: 85%</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="wifi-icon">📶</span>
+                        <span>WiFi Connected</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="sensor-icon">📡</span>
+                        <span>Sensors Online</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="voicePopup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <div class="popup-icon">🔊</div>
+            <h3 id="popupTitle">Voice Reminder</h3>
+            <p id="popupMessage">Playing voice message...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
