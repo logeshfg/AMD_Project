@@ -6,10 +6,10 @@ if (loginForm) {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         
-        if (username === 'admin' && password === '1234') {
+        if (username === 'user_007' && password === '229') {
             window.location.href = 'index.html';
         } else {
-            alert('Invalid credentials! Use admin / 1234');
+            alert('Invalid credentials! Use user_reg / id');
         }
     });
 }
@@ -123,4 +123,5 @@ function simulateDoorOpen() {
     speak('Alert. Patient has left the house.');
     
     showPopup('emergency', 'Alert! Patient has left the house. Caregiver has been notified.');
+
 }
